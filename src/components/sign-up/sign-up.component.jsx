@@ -27,7 +27,7 @@ class Signup extends Component {
       }
       try {
           const {user} = await auth.createUserWithEmailAndPassword(email,password);
-          createUserProfileDocument(user,{displayName});
+         createUserProfileDocument(user,{displayName});
           this.setState({
             displayName: "",
             email: "",
@@ -53,7 +53,7 @@ class Signup extends Component {
       <div className="sign-up">
         <h2 className="title">I do not have an account </h2>
         <span>Sign Up with your email and password</span>
-        <form className="sign-up-form" onSubmit={this.hansleSubmit}>
+        <form className="sign-up-form" onSubmit={this.handleSubmit}>
           <FormInput
             type="text"
             name="displayName"
